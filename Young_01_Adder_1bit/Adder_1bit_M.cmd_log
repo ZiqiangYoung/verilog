@@ -1,0 +1,7 @@
+xst -intstyle ise -ifn "Z:/WorkSpace/Verilog/Young_01_Adder_1bit/Adder_1bit_M.xst" -ofn "Z:/WorkSpace/Verilog/Young_01_Adder_1bit/Adder_1bit_M.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Adder_1bit_M.ucf -p xc7a100t-csg324-3 Adder_1bit_M.ngc Adder_1bit_M.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Adder_1bit_M_map.ncd Adder_1bit_M.ngd Adder_1bit_M.pcf 
+par -w -intstyle ise -ol high -mt off Adder_1bit_M_map.ncd Adder_1bit_M.ncd Adder_1bit_M.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Adder_1bit_M.twx Adder_1bit_M.ncd -o Adder_1bit_M.twr Adder_1bit_M.pcf -ucf Adder_1bit_M.ucf 
+bitgen -intstyle ise -f Adder_1bit_M.ut Adder_1bit_M.ncd 
+bitgen -intstyle ise -f Adder_1bit_M.ut Adder_1bit_M.ncd 

@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=Z:\WorkSpace\Verilog\Young_01_Adder_1bit\Adder_1bit_M.ncd
+OUTFILE=Z:\WorkSpace\Verilog\Young_01_Adder_1bit\Adder_1bit_M.bit
+FAMILY=Artix7
+PART=xc7a100t-3csg324
+WORKINGDIR=Z:\WorkSpace\Verilog\Young_01_Adder_1bit
+LICENSE=WebPack
+USER_INFO=__0_0_0

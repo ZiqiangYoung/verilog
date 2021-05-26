@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<document>
+<!--The data in this file is primarily intended for consumption by Xilinx tools.
+The structure and the elements are likely to change over the next few releases.
+This means code written to parse this file will need to be revisited each subsequent release.-->
+<application name="pn" timeStamp="Wed May 26 21:53:06 2021">
+<section name="Project Information" visible="false">
+<property name="ProjectID" value="11E888112A0E4DC0A540581C6125E8A4" type="project"/>
+<property name="ProjectIteration" value="0" type="project"/>
+<property name="ProjectFile" value="Z:/WorkSpace/Verilog/Young_05_RAM_64x32bit/Young_05_RAM_64x32bit.xise" type="project"/>
+<property name="ProjectCreationTimestamp" value="2021-05-26T20:18:33" type="project"/>
+</section>
+<section name="Project Statistics" visible="true">
+<property name="PROP_Enable_Message_Filtering" value="false" type="design"/>
+<property name="PROP_FitterReportFormat" value="HTML" type="process"/>
+<property name="PROP_LastAppliedGoal" value="Balanced" type="design"/>
+<property name="PROP_LastAppliedStrategy" value="Xilinx Default (unlocked)" type="design"/>
+<property name="PROP_ManualCompileOrderImp" value="false" type="design"/>
+<property name="PROP_ProjectDescription" value="按照泛雅题目要求，根据rs,rt两寄存器号去读出数据，将这两个数据送去ALU运算，运算结果F作为RAM存储单元号
+读取RAM号的数据和F，根据rw_data_s信号的值竞争写入rd为寄存器号的寄存器。此外rt寄存器号读出的数据还可存进RAM。" type="process"/>
+<property name="PROP_PropSpecInProjFile" value="Store all values" type="design"/>
+<property name="PROP_SelectedInstanceHierarchicalPath" value="/Comprehensive_Test/uut/RegisterFile_32x32bit_I" type="process"/>
+<property name="PROP_Simulator" value="ISim (VHDL/Verilog)" type="design"/>
+<property name="PROP_SynthTopFile" value="changed" type="process"/>
+<property name="PROP_Top_Level_Module_Type" value="HDL" type="design"/>
+<property name="PROP_UseSmartGuide" value="false" type="design"/>
+<property name="PROP_UserConstraintEditorPreference" value="Text Editor" type="process"/>
+<property name="PROP_intProjectCreationTimestamp" value="2021-05-26T20:18:33" type="design"/>
+<property name="PROP_intWbtProjectID" value="11E888112A0E4DC0A540581C6125E8A4" type="design"/>
+<property name="PROP_intWorkingDirLocWRTProjDir" value="Same" type="design"/>
+<property name="PROP_intWorkingDirUsed" value="No" type="design"/>
+<property name="PROP_selectedSimRootSourceNode_behav" value="work.RegisterFile_32x32bit_M" type="process"/>
+<property name="PROP_AutoTop" value="true" type="design"/>
+<property name="PROP_DevFamily" value="Artix7" type="design"/>
+<property name="PROP_DevDevice" value="xc7a100t" type="design"/>
+<property name="PROP_DevFamilyPMName" value="artix7" type="design"/>
+<property name="PROP_DevPackage" value="csg324" type="design"/>
+<property name="PROP_Synthesis_Tool" value="XST (VHDL/Verilog)" type="design"/>
+<property name="PROP_DevSpeed" value="-3" type="design"/>
+<property name="PROP_PreferredLanguage" value="Verilog" type="design"/>
+<property name="FILE_COREGEN" value="1" type="source"/>
+<property name="FILE_VERILOG" value="6" type="source"/>
+</section>
+</application>
+</document>

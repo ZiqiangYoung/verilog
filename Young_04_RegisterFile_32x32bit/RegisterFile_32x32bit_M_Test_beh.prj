@@ -1,0 +1,3 @@
+verilog work "RegisterFile_32x32bit_M.v"
+verilog work "RegisterFile_32x32bit_M_Test.v"
+verilog work "D:/APP/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

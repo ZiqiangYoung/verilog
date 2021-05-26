@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Thu Apr 22 08:45:24 2021
+# Process ID: 4360
+# Log file: Z:/WorkSpace/Verilog/Young_01_Adder_1bit/planAhead_run_3/planAhead.log
+# Journal file: Z:/WorkSpace/Verilog/Young_01_Adder_1bit/planAhead_run_3/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source Z:/WorkSpace/Verilog/Young_01_Adder_1bit/pa.fromNetlist.tcl
+set_property package_pin "" [get_ports [list  A]]
+set_property package_pin "" [get_ports [list  B]]
+set_property package_pin "" [get_ports [list  A]]
+set_property package_pin "" [get_ports [list  B]]
+set_property pulltype PULLDOWN [get_ports [list A]]
+set_property pulltype PULLDOWN [get_ports [list B]]
+set_property pulltype PULLDOWN [get_ports [list C0]]
+set_property package_pin "" [get_ports [list  F]]
+set_property package_pin "" [get_ports [list  C0]]
+save_constraints

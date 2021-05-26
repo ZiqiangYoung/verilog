@@ -1,0 +1,11 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Thu Apr 22 08:43:58 2021
+# Process ID: 4952
+# Log file: Z:/WorkSpace/Verilog/Young_01_Adder_1bit/planAhead_run_2/planAhead.log
+# Journal file: Z:/WorkSpace/Verilog/Young_01_Adder_1bit/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source Z:/WorkSpace/Verilog/Young_01_Adder_1bit/pa.fromHdl.tcl
+update_compile_order -fileset sim_1

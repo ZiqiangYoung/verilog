@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "D:/WorkSpace/Verilog/Young_02_LookaheadAdder_4bit/LookaheadAdder_4bit_M.xst" -ofn "D:/WorkSpace/Verilog/Young_02_LookaheadAdder_4bit/LookaheadAdder_4bit_M.syr" 
+xst -intstyle ise -ifn "D:/WorkSpace/Verilog/Young_02_LookaheadAdder_4bit/LookaheadAdder_4bit_M.xst" -ofn "D:/WorkSpace/Verilog/Young_02_LookaheadAdder_4bit/LookaheadAdder_4bit_M.syr" 
+xst -intstyle ise -ifn "Z:/WorkSpace/Verilog/Young_02_LookaheadAdder_4bit/LookaheadAdder_4bit_M.xst" -ofn "Z:/WorkSpace/Verilog/Young_02_LookaheadAdder_4bit/LookaheadAdder_4bit_M.syr" 
+xst -intstyle ise -ifn "Z:/WorkSpace/Verilog/Young_02_LookaheadAdder_4bit/LookaheadAdder_4bit_M.xst" -ofn "Z:/WorkSpace/Verilog/Young_02_LookaheadAdder_4bit/LookaheadAdder_4bit_M.syr" 

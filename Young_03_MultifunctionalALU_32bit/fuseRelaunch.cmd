@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "Z:/WorkSpace/Verilog/Young_03_MultifunctionalALU_32bit/MultifunctionalALU_32bit_M_Test_isim_beh.exe" -prj "Z:/WorkSpace/Verilog/Young_03_MultifunctionalALU_32bit/MultifunctionalALU_32bit_M_Test_beh.prj" "work.MultifunctionalALU_32bit_M_Test" "work.glbl" 

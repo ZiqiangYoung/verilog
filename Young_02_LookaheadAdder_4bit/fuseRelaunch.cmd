@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "Z:/WorkSpace/Verilog/Young_02_LookaheadAdder_4bit/LookaheadAdder_4bit_M_Test_isim_beh.exe" -prj "Z:/WorkSpace/Verilog/Young_02_LookaheadAdder_4bit/LookaheadAdder_4bit_M_Test_beh.prj" "work.LookaheadAdder_4bit_M_Test" "work.glbl" 

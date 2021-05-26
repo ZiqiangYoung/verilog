@@ -1,0 +1,28 @@
+Command line:
+   LookaheadAdder_4bit_M_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  49801
+
+Wed Apr 21 09:26:34 2021
+
+
+ Elaboration Time: 0.125 sec
+
+ Current Memory Usage: 5184.22 Meg
+
+ Total Signals          : 21
+ Total Nets             : 40
+ Total Signal Drivers   : 14
+ Total Blocks           : 2
+ Total Primitive Blocks : 2
+ Total Processes        : 15
+ Total Traceable Variables  : 18
+ Total Scalar Nets and Variables : 120
+
+ Total Simulation Time: 0.140625 sec
+
+ Current Memory Usage: 5184.22 Meg
+
+Wed Apr 21 09:26:42 2021
+

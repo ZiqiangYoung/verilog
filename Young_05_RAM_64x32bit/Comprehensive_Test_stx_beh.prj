@@ -1,0 +1,6 @@
+verilog isim_temp "RegisterFile_32x32bit_M.v"
+verilog isim_temp "RAM_64x32bit_M.v"
+verilog isim_temp "MultifunctionalALU_32bit_M.v"
+verilog isim_temp "Comprehensive.v"
+verilog isim_temp "Comprehensive_Test.v"
+verilog isim_temp "D:/APP/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

@@ -1,0 +1,31 @@
+Running: D:\APP\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o Z:/WorkSpace/Verilog/Young_05_RAM_64x32bit/Comprehensive_Test_isim_beh.exe -prj Z:/WorkSpace/Verilog/Young_05_RAM_64x32bit/Comprehensive_Test_beh.prj work.Comprehensive_Test work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "Z:/WorkSpace/Verilog/Young_05_RAM_64x32bit/ipcore_dir/RAM_64x32bit_C.v" into library work
+Analyzing Verilog file "Z:/WorkSpace/Verilog/Young_05_RAM_64x32bit/RegisterFile_32x32bit_M.v" into library work
+Analyzing Verilog file "Z:/WorkSpace/Verilog/Young_05_RAM_64x32bit/RAM_64x32bit_M.v" into library work
+Analyzing Verilog file "Z:/WorkSpace/Verilog/Young_05_RAM_64x32bit/MultifunctionalALU_32bit_M.v" into library work
+Analyzing Verilog file "Z:/WorkSpace/Verilog/Young_05_RAM_64x32bit/Comprehensive.v" into library work
+Analyzing Verilog file "Z:/WorkSpace/Verilog/Young_05_RAM_64x32bit/Comprehensive_Test.v" into library work
+Analyzing Verilog file "D:/APP/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module MultifunctionalALU_32bit_M
+Compiling module RegisterFile_32x32bit_M
+Compiling module BLK_MEM_GEN_V7_3_output_stage(C_...
+Compiling module BLK_MEM_GEN_V7_3_softecc_output_...
+Compiling module BLK_MEM_GEN_V7_3_mem_module(C_CO...
+Compiling module BLK_MEM_GEN_V7_3(C_FAMILY="artix...
+Compiling module RAM_64x32bit_C
+Compiling module RAM_64x32bit_M
+Compiling module Comprehensive
+Compiling module Comprehensive_Test
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 11 Verilog Units
+Built simulation executable Z:/WorkSpace/Verilog/Young_05_RAM_64x32bit/Comprehensive_Test_isim_beh.exe
+Fuse Memory Usage: 32700 KB
+Fuse CPU Usage: 687 ms

@@ -1,0 +1,35 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Fri Apr 23 16:01:17 2021
+# Process ID: 4464
+# Log file: Z:/WorkSpace/Verilog/Young_01_Adder_1bit/planAhead_run_4/planAhead.log
+# Journal file: Z:/WorkSpace/Verilog/Young_01_Adder_1bit/planAhead_run_4/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source Z:/WorkSpace/Verilog/Young_01_Adder_1bit/pa.fromNetlist.tcl
+set_property package_pin "" [get_ports [list  A]]
+set_property package_pin "" [get_ports [list  B]]
+startgroup
+set_property package_pin T3 [get_ports A]
+endgroup
+startgroup
+set_property package_pin U3 [get_ports B]
+endgroup
+startgroup
+set_property package_pin T4 [get_ports C0]
+endgroup
+startgroup
+set_property package_pin R1 [get_ports C1]
+endgroup
+startgroup
+set_property package_pin P2 [get_ports F]
+endgroup
+set_property iostandard LVCMOS18 [get_ports [list A]]
+set_property iostandard LVCMOS18 [get_ports [list B]]
+set_property iostandard LVCMOS33 [get_ports [list A]]
+set_property iostandard LVCMOS33 [get_ports [list B]]
+set_property iostandard LVCMOS33 [get_ports [list C0]]
+set_property iostandard LVCMOS33 [get_ports [list C1]]
+set_property iostandard LVCMOS33 [get_ports [list F]]
+save_constraints

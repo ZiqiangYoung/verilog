@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "Z:/WorkSpace/Verilog/Young_04_RegisterFile_32x32bit/RegisterFile_32x32bit_M.xst" -ofn "Z:/WorkSpace/Verilog/Young_04_RegisterFile_32x32bit/RegisterFile_32x32bit_M.syr" 

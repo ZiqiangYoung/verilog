@@ -1,0 +1,2 @@
+verilog work "ipcore_dir/RAM_64x32bit_C.v"
+verilog work "RAM_64x32bit_M.v"
