@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2021-05-26T21:48:40</DateModified>
+  <DateModified>2021-05-27T13:58:20</DateModified>
   <ModuleName>Comprehensive</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>Z:/WorkSpace/Verilog/Young_05_RAM_64x32bit/iseconfig/Comprehensive.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>Z:/WorkSpace/Verilog/Young_05_RAM_64x32bit</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>Z:/WorkSpace/Verilog/Young_05_RAM_64x32bit\</ImplementationReportsDirectory>
   <DateInitialized>2021-05-26T21:21:44</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

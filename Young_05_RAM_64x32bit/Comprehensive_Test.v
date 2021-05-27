@@ -41,10 +41,8 @@ module Comprehensive_Test;
 	wire [31:0] M_R_Data;
 	wire [31:0] R_Data_A;
 	wire [31:0] R_Data_B;
-	wire [31:0] W_Data,M_W_Data;
-	wire [5:0] Mem_Addr;
-	wire [32:1] A,B,F;
-	wire [4:0] R_Addr_A,R_Addr_B,W_Addr;
+	wire [31:0] W_Data;
+	wire [31:0] F;
 	
 	// Instantiate the Unit Under Test (UUT)
 	Comprehensive uut (
@@ -63,14 +61,7 @@ module Comprehensive_Test;
 		.R_Data_A(R_Data_A), 
 		.R_Data_B(R_Data_B), 
 		.W_Data(W_Data), 
-		.Mem_Addr(Mem_Addr),
-		.A(A),
-		.B(B),
-		.F(F),
-		.R_Addr_A(R_Addr_A),
-		.R_Addr_B(R_Addr_B),
-		.W_Addr(W_Addr),
-		.M_W_Data(M_W_Data)
+		.F(F)
 	);
 
 	initial begin

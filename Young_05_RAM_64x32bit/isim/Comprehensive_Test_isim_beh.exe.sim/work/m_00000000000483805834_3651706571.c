@@ -759,9 +759,9 @@ LAB10:    t77 = *((unsigned int *)t65);
 }
 
 
-extern void work_m_00000000002721251275_3651706571_init()
+extern void work_m_00000000000483805834_3651706571_init()
 {
 	static char *pe[] = {(void *)Always_31_0,(void *)Cont_51_1,(void *)Cont_52_2};
-	xsi_register_didat("work_m_00000000002721251275_3651706571", "isim/Comprehensive_Test_isim_beh.exe.sim/work/m_00000000002721251275_3651706571.didat");
+	xsi_register_didat("work_m_00000000000483805834_3651706571", "isim/Comprehensive_Test_isim_beh.exe.sim/work/m_00000000000483805834_3651706571.didat");
 	xsi_register_executes(pe);
 }
