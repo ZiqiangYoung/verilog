@@ -2,14 +2,14 @@ Command line:
    Comprehensive_Test_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  49814
+     -socket  49819
 
-Thu May 27 14:10:49 2021
+Thu Jun 03 16:05:42 2021
 
 
  Elaboration Time: 0.125 sec
 
- Current Memory Usage: 5184.31 Meg
+ Current Memory Usage: 5183.67 Meg
 
  Total Signals          : 200
  Total Nets             : 807
@@ -20,9 +20,9 @@ Thu May 27 14:10:49 2021
  Total Traceable Variables  : 350
  Total Scalar Nets and Variables : 22358
 
- Total Simulation Time: 0.1875 sec
+ Total Simulation Time: 0.15625 sec
 
- Current Memory Usage: 5027.02 Meg
+ Current Memory Usage: 5183.67 Meg
 
-Thu May 27 14:11:57 2021
+Thu Jun 03 16:05:47 2021
 

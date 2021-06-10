@@ -250,6 +250,7 @@
     <property xil_pn:name="Preferred Language" xil_pn:value="Verilog" xil_pn:valueState="default"/>
     <property xil_pn:name="Produce Verbose Report" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Project Description" xil_pn:value="按照泛雅题目要求，根据rs,rt两寄存器号去读出数据，将这两个数据送去ALU运算，运算结果F作为RAM存储单元号&#xA;读取RAM号的数据和F，根据rw_data_s信号的值竞争写入rd为寄存器号的寄存器。此外rt寄存器号读出的数据还可存进RAM。" xil_pn:valueState="non-default"/>
+    <property xil_pn:name="Project Generator" xil_pn:value="ProjNav" xil_pn:valueState="default"/>
     <property xil_pn:name="Property Specification in Project File" xil_pn:value="Store all values" xil_pn:valueState="default"/>
     <property xil_pn:name="RAM Extraction" xil_pn:value="true" xil_pn:valueState="default"/>
     <property xil_pn:name="RAM Style" xil_pn:value="Auto" xil_pn:valueState="default"/>

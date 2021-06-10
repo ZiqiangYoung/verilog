@@ -71,14 +71,14 @@ module Comprehensive_Test;
 		ALU_OP = 3'b100;//ALU切换至加法
 		Mem_Write = 0;//禁止写入RAM
 		wr_data_s = 0;//W_Data连接的是ALU的F
-		Reset = 1;//准备给寄存器堆清零
+		Reset = 0;//准备给寄存器堆清零
 		rs = 5'b000_00;
 		rt = 5'b000_01;
 		rd = 5'b000_10;
 		#100;
 		
 		//clk上升&寄存器堆完成清零&ALU完成加法运算||| 100-200
-		clk=1;#100;
+		Reset=1;clk=1;#100;
 		/*
 		理想数据：
 		R_Data_A=0000_FFFF
@@ -137,17 +137,11 @@ module Comprehensive_Test;
 		OF=0
 		F=AAAA_AAA9
 		Mem_Addr=6'b101001//41号RAM单元
-		M_R_Data=AAAA_AAAA|FFFF_FFFF//有可能下个周期才切换到新的地址并读出
-		W_Data=F=AAAA_AAAA|FFFF_FFFF//同上
+		M_R_Data=FFFF_FFFF
+		W_Data=F=FFFF_FFFF
 		*/
 		
-		//clk下降后上升，RAM的M_R_Data更新||| 900-1000
-		clk=0;#100;
-		clk=1;#100;
-		/*理想数值:
-		M_R_Data=FFFF_FFFF
-		W_Data=FFFF_FFFF
-		*/
+		//end;
 
 	end
       

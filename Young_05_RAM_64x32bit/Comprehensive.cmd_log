@@ -1,3 +1,4 @@
 xst -intstyle ise -ifn "Z:/WorkSpace/Verilog/Young_05_RAM_64x32bit/Comprehensive.xst" -ofn "Z:/WorkSpace/Verilog/Young_05_RAM_64x32bit/Comprehensive.syr" 
 xst -intstyle ise -ifn "Z:/WorkSpace/Verilog/Young_05_RAM_64x32bit/Comprehensive.xst" -ofn "Z:/WorkSpace/Verilog/Young_05_RAM_64x32bit/Comprehensive.syr" 
 xst -intstyle ise -ifn "Z:/WorkSpace/Verilog/Young_05_RAM_64x32bit/Comprehensive.xst" -ofn "Z:/WorkSpace/Verilog/Young_05_RAM_64x32bit/Comprehensive.syr" 
+xst -intstyle ise -ifn "Z:/WorkSpace/Verilog/Young_05_RAM_64x32bit/Comprehensive.xst" -ofn "Z:/WorkSpace/Verilog/Young_05_RAM_64x32bit/Comprehensive.syr" 

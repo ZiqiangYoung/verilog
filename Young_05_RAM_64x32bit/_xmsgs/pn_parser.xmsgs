@@ -11,5 +11,14 @@
 <msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/WorkSpace/Verilog/Young_05_RAM_64x32bit/Comprehensive.v&quot; into library work</arg>
 </msg>
 
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/WorkSpace/Verilog/Young_05_RAM_64x32bit/MultifunctionalALU_32bit_M.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/WorkSpace/Verilog/Young_05_RAM_64x32bit/RAM_64x32bit_M.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/WorkSpace/Verilog/Young_05_RAM_64x32bit/RegisterFile_32x32bit_M.v&quot; into library work</arg>
+</msg>
+
 </messages>
 
