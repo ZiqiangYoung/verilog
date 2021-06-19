@@ -1,7 +1,7 @@
 ##############################################################
 #
 # Xilinx Core Generator version 14.7
-# Date: Thu Jun 03 07:22:18 2021
+# Date: Wed Jun 16 03:51:54 2021
 #
 ##############################################################
 #
@@ -51,9 +51,9 @@ CSET depth=64
 CSET dual_port_address=non_registered
 CSET dual_port_output_clock_enable=false
 CSET input_clock_enable=false
-CSET input_options=registered
+CSET input_options=non_registered
 CSET memory_type=rom
-CSET output_options=non_registered
+CSET output_options=registered
 CSET pipeline_stages=0
 CSET qualify_we_with_i_ce=false
 CSET reset_qdpo=false
@@ -70,4 +70,4 @@ CSET sync_reset_qspo=false
 MISC pkg_timestamp=2012-11-21T20:07:40Z
 # END Extra information
 GENERATE
-# CRC: 1c1c4501
+# CRC: ffd7005b

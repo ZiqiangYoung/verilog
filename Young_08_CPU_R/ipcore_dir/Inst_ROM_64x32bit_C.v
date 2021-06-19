@@ -39,12 +39,12 @@
 module Inst_ROM_64x32bit_C(
   a,
   clk,
-  spo
+  qspo
 );
 
 input [5 : 0] a;
 input clk;
-output [31 : 0] spo;
+output [31 : 0] qspo;
 
 // synthesis translate_off
 
@@ -63,11 +63,11 @@ output [31 : 0] spo;
     .C_HAS_QDPO_CLK(0),
     .C_HAS_QDPO_RST(0),
     .C_HAS_QDPO_SRST(0),
-    .C_HAS_QSPO(0),
+    .C_HAS_QSPO(1),
     .C_HAS_QSPO_CE(0),
     .C_HAS_QSPO_RST(0),
     .C_HAS_QSPO_SRST(0),
-    .C_HAS_SPO(1),
+    .C_HAS_SPO(0),
     .C_HAS_SPRA(0),
     .C_HAS_WE(0),
     .C_MEM_INIT_FILE("Inst_ROM_64x32bit_C.mif"),
@@ -77,7 +77,7 @@ output [31 : 0] spo;
     .C_QCE_JOINED(0),
     .C_QUALIFY_WE(0),
     .C_READ_MIF(1),
-    .C_REG_A_D_INPUTS(1),
+    .C_REG_A_D_INPUTS(0),
     .C_REG_DPRA_INPUT(0),
     .C_SYNC_ENABLE(1),
     .C_WIDTH(32)
@@ -85,7 +85,7 @@ output [31 : 0] spo;
   inst (
     .A(a),
     .CLK(clk),
-    .SPO(spo),
+    .QSPO(qspo),
     .D(),
     .DPRA(),
     .SPRA(),
@@ -98,8 +98,8 @@ output [31 : 0] spo;
     .QDPO_RST(),
     .QSPO_SRST(),
     .QDPO_SRST(),
+    .SPO(),
     .DPO(),
-    .QSPO(),
     .QDPO()
   );
 

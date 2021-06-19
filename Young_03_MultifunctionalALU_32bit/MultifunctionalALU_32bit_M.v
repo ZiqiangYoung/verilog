@@ -19,36 +19,64 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module MultifunctionalALU_32bit_M(A,B,F,ZF,OF,ALU_OP);
-	input [32:1] A;
-	input [32:1] B;
+	input [31:0] A;
+	input [31:0] B;
 	input [2 :0] ALU_OP;
 	
-	output reg [32:1] F;//行为建模方式always，因为wire是物理模型的连线，所以左端不能是wire型
+	output [31:0] F;
 	output ZF,OF;
 	
-	reg C32;//在加减运算中表示超出32位(0-31)有效范围的最高位进位/借位
-	
+	/*
+		以下的always是按照课本要求的行为建模方式建模的，产生的实际上是时序控制电路
+		敏感信号表实际为*，即任意输入信号电平变化都会引起F寄存器的值改变
+		但是在我设想中应当是用数据流级建模方式，产生的是硬布线逻辑控制电路
+		用时序电路也不是不可以，但是会生成额外的锁存器，按电位触发
+	reg F,C31;
 	always @ *
-		begin//这个块实际上只会执行一条语句，所以不需要考虑用非阻塞赋值<=提高效率
+		begin
 			case(ALU_OP)
-				3'b000: F=A&B;
-				3'b001: F=A|B;
-				3'b010: F=A^B;
-				3'b011: F=~(A|B);
-				3'b100:
-					begin
-						{C32,F}=A+B;
-					end
-				3'b101:
-					begin
-						{C32,F}=A-B;//A+~B+1
-					end
-				3'b110: F=A<B;//A<B?1,0
-				3'b111: F=B<<A;//<<<是算数左移
+				3'b000: F<=A&B;
+				3'b001: F<=A|B;
+				3'b010: F<=A^B;
+				3'b011: F<=~(A|B);
+				3'b100: {C31,F}<=A+B;
+				3'b101: {C31,F}<=A-B;//A+~B+1
+				3'b110: F<=A<B;//A<B?1,0
+				3'b111: F<=B<<A;
+				//三根线八种情况全部涉及到，不用default了
 			endcase
 		end
-					
-		assign ZF = F==0;//F中数据有意义时，该位数据才有意义
-		assign OF = A[31]^B[31]^F[31]^C32;//同上，且只对带符号数的算数运算有表示溢出的意义
+	*/
+	
+	wire [31:0] F_AND,F_OR,F_XOR,F_NOR,F_SHIFT_LEFT;
+	wire [32:0] F_ADD,F_SUB;
+	wire F_LessCMP;
+	
+	assign F_AND=A&B;
+	assign F_OR=A|B;
+	assign F_XOR=A^B;
+	assign F_NOR=~(A|B);
+	assign F_ADD=A+B;
+	assign F_SUB=A-B;
+	assign F_SHIFT_LEFT=A<<B;
+	assign F_LessCMP=A<B;
+	
+	assign F=(ALU_OP==3'b000)?F_AND:
+				(ALU_OP==3'b001)?F_OR:
+				(ALU_OP==3'b010)?F_XOR:
+				(ALU_OP==3'b011)?F_NOR:
+				(ALU_OP==3'b100)?F_ADD[31:0]:
+				(ALU_OP==3'b101)?F_SUB[31:0]:
+				(ALU_OP==3'b110)?F_LessCMP:
+				(ALU_OP==3'b111)?F_SHIFT_LEFT;
+	
+	assign ZF = F==0;
+	assign OF = A[30]^B[30]^F[30]^(
+					(ALU_OP==3'b100)?F_ADD[32]:
+					(ALU_OP==3'b101)?F_SUB[32]:
+					1'bX);
+	//最后一个括号代表C31,default x
+	//只对带符号数的算数运算有表示溢出的意义
+	//OF算式意义是ABF的最高有效位和符号位进位异或(符号位31，则最高有效位30)
 		
 endmodule

@@ -45,7 +45,7 @@
 Inst_ROM_64x32bit_C your_instance_name (
   .a(a), // input [5 : 0] a
   .clk(clk), // input clk
-  .spo(spo) // output [31 : 0] spo
+  .qspo(qspo) // output [31 : 0] qspo
 );
 // INST_TAG_END ------ End INSTANTIATION Template ---------
 

@@ -100,7 +100,7 @@ ARCHITECTURE Inst_ROM_64x32bit_C_synth_ARCH OF Inst_ROM_64x32bit_C_tb_synth IS
 COMPONENT Inst_ROM_64x32bit_C_exdes
   PORT (
     CLK        : IN  STD_LOGIC                                                := '0';
-    SPO        : OUT STD_LOGIC_VECTOR(32-1 downto 0);
+    QSPO       : OUT STD_LOGIC_VECTOR(32-1 downto 0);
     A          : IN  STD_LOGIC_VECTOR(6-1-(4*0*boolean'pos(6>4)) downto 0)
                  := (OTHERS => '0')
       );
@@ -120,8 +120,8 @@ END COMPONENT;
 
   SIGNAL ADDR: STD_LOGIC_VECTOR(5 DOWNTO 0) := (OTHERS => '0');
   SIGNAL ADDR_R: STD_LOGIC_VECTOR(5 DOWNTO 0) := (OTHERS => '0');
-  SIGNAL SPO: STD_LOGIC_VECTOR(31 DOWNTO 0) := (OTHERS => '0');
-  SIGNAL SPO_R: STD_LOGIC_VECTOR(31 DOWNTO 0) := (OTHERS => '0');
+  SIGNAL QSPO: STD_LOGIC_VECTOR(31 DOWNTO 0) := (OTHERS => '0');
+  SIGNAL QSPO_R: STD_LOGIC_VECTOR(31 DOWNTO 0) := (OTHERS => '0');
   SIGNAL ITER_R0 : STD_LOGIC := '0';
   SIGNAL ITER_R1 : STD_LOGIC := '0';
   SIGNAL ITER_R2 : STD_LOGIC := '0';
@@ -164,7 +164,7 @@ STATUS(7 DOWNTO 0) <= ISSUE_FLAG_STATUS;
        CLK         => clk_in_i,
        RST         => RSTA,
        A           => ADDR,
-		 DATA_IN     => SPO_R,
+		 DATA_IN     => QSPO_R,
 		 STATUS      => ISSUE_FLAG(0)
              );
 
@@ -202,9 +202,9 @@ STATUS(7 DOWNTO 0) <= ISSUE_FLAG_STATUS;
       BEGIN
         IF(RISING_EDGE(CLKA)) THEN
 		  IF(RESET_SYNC_R3='1') THEN
-          SPO_R      <= (OTHERS=>'0') AFTER 50 ns;
+          QSPO_R     <= (OTHERS=>'0') AFTER 50 ns;
            ELSE
-          SPO_R      <= SPO AFTER 50 ns;
+          QSPO_R     <= QSPO AFTER 50 ns;
          END IF;
 	    END IF;
       END PROCESS;
@@ -222,7 +222,7 @@ STATUS(7 DOWNTO 0) <= ISSUE_FLAG_STATUS;
 
     DMG_PORT: Inst_ROM_64x32bit_C_exdes PORT MAP (
       CLK                     => CLKA,
-      SPO                     => SPO,
+      QSPO                    => QSPO,
       A                       => ADDR_R
 
       );

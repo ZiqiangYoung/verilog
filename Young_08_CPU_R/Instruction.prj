@@ -1,3 +1,0 @@
-verilog work "ipcore_dir/Inst_ROM_64x32bit_C.v"
-verilog work "Inst_ROM_64x32bit_M.v"
-verilog work "Instruction.v"

@@ -108,7 +108,7 @@ architecture xilinx of Inst_ROM_64x32bit_C_exdes is
   PORT (
 
       CLK                     : IN STD_LOGIC;
-      SPO                     : OUT STD_LOGIC_VECTOR(32-1 downto 0);
+      QSPO                    : OUT STD_LOGIC_VECTOR(32-1 downto 0);
       A                       : IN  STD_LOGIC_VECTOR(6-1-(4*0*boolean'pos(6>4)) downto 0)
                               := (OTHERS => '0')
 
@@ -122,7 +122,7 @@ begin
     port map (
 
       CLK                     => CLK_i,
-      SPO                     => SPO,
+      QSPO                    => QSPO,
       A                       => A
 
       );

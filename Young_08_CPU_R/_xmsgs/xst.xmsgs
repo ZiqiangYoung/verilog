@@ -5,5 +5,23 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="warning" file="HDLCompiler" num="1499" delta="old" >"\\vmware-host\shared folders\WorkSpace\Verilog\Young_08_CPU_R\ipcore_dir\Inst_ROM_64x32bit_C.v" Line 39: Empty module &lt;<arg fmt="%s" index="1">Inst_ROM_64x32bit_C</arg>&gt; remains a black box.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"\\vmware-host\shared folders\WorkSpace\Verilog\Young_08_CPU_R\CPU_R_M.v" Line 51: Assignment to <arg fmt="%s" index="1">shamt</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"\\vmware-host\shared folders\WorkSpace\Verilog\Young_08_CPU_R\CPU_R_M.v" Line 54: Assignment to <arg fmt="%s" index="1">address</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">\\vmware-host\shared folders\WorkSpace\Verilog\Young_08_CPU_R\CPU_R_M.v</arg>&quot; line <arg fmt="%s" index="2">44</arg>: Output port &lt;<arg fmt="%s" index="3">shamt</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">Fetch_Inst_I</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">\\vmware-host\shared folders\WorkSpace\Verilog\Young_08_CPU_R\CPU_R_M.v</arg>&quot; line <arg fmt="%s" index="2">44</arg>: Output port &lt;<arg fmt="%s" index="3">address</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">Fetch_Inst_I</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_ALU_OP</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+</msg>
+
 </messages>
 

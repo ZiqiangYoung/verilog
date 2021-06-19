@@ -37,4 +37,3 @@ Inst_ROM_64x32bit_C\simulation\timing\simulate_mti.do
 Inst_ROM_64x32bit_C\simulation\timing\simulate_mti.sh
 Inst_ROM_64x32bit_C_flist.txt
 Inst_ROM_64x32bit_C_xmdf.tcl
-_xmsgs\pn_parser.xmsgs

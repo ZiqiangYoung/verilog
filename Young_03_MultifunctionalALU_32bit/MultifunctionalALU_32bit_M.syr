@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.44 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.45 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Reading design: MultifunctionalALU_32bit_M.prj
 
@@ -120,18 +120,14 @@ Elaborating module <MultifunctionalALU_32bit_M>.
 
 Synthesizing Unit <MultifunctionalALU_32bit_M>.
     Related source file is "\\vmware-host\shared folders\WorkSpace\Verilog\Young_03_MultifunctionalALU_32bit\MultifunctionalALU_32bit_M.v".
-    Found 33-bit subtractor for signal <GND_1_o_GND_1_o_sub_7_OUT> created at line 44.
-    Found 33-bit adder for signal <n0032> created at line 40.
-    Found 32-bit shifter logical left for signal <B[32]_A[32]_shift_left_8_OUT> created at line 47
-    Found 32-bit 8-to-1 multiplexer for signal <F> created at line 33.
-WARNING:Xst:737 - Found 1-bit latch for signal <C32>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-    Found 32-bit comparator greater for signal <A[32]_B[32]_LessThan_8_o> created at line 46
+    Found 33-bit subtractor for signal <F_SUB> created at line 60.
+    Found 33-bit adder for signal <n0044> created at line 59.
+    Found 32-bit 7-to-1 multiplexer for signal <F> created at line 26.
+    Found 32-bit comparator greater for signal <F_LessCMP> created at line 61
     Summary:
 	inferred   2 Adder/Subtractor(s).
-	inferred   1 Latch(s).
 	inferred   1 Comparator(s).
-	inferred   3 Multiplexer(s).
-	inferred   1 Combinational logic shifter(s).
+	inferred   2 Multiplexer(s).
 Unit <MultifunctionalALU_32bit_M> synthesized.
 
 =========================================================================
@@ -141,16 +137,11 @@ Macro Statistics
 # Adders/Subtractors                                   : 2
  33-bit adder                                          : 1
  33-bit subtractor                                     : 1
-# Latches                                              : 1
- 1-bit latch                                           : 1
 # Comparators                                          : 1
  32-bit comparator greater                             : 1
-# Multiplexers                                         : 3
+# Multiplexers                                         : 2
  1-bit 2-to-1 multiplexer                              : 1
- 32-bit 2-to-1 multiplexer                             : 1
- 32-bit 8-to-1 multiplexer                             : 1
-# Logic shifters                                       : 1
- 32-bit shifter logical left                           : 1
+ 32-bit 7-to-1 multiplexer                             : 1
 # Xors                                                 : 2
  1-bit xor4                                            : 1
  32-bit xor2                                           : 1
@@ -171,12 +162,8 @@ Macro Statistics
  33-bit subtractor                                     : 1
 # Comparators                                          : 1
  32-bit comparator greater                             : 1
-# Multiplexers                                         : 3
- 1-bit 2-to-1 multiplexer                              : 1
- 32-bit 2-to-1 multiplexer                             : 1
- 32-bit 8-to-1 multiplexer                             : 1
-# Logic shifters                                       : 1
- 32-bit shifter logical left                           : 1
+# Multiplexers                                         : 1
+ 32-bit 7-to-1 multiplexer                             : 1
 # Xors                                                 : 2
  1-bit xor4                                            : 1
  32-bit xor2                                           : 1
@@ -220,19 +207,17 @@ Top Level Output File Name         : MultifunctionalALU_32bit_M.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 421
+# BELS                             : 315
 #      GND                         : 1
-#      LUT2                        : 66
-#      LUT3                        : 24
-#      LUT4                        : 40
-#      LUT5                        : 35
-#      LUT6                        : 109
+#      LUT2                        : 64
+#      LUT3                        : 2
+#      LUT4                        : 62
+#      LUT5                        : 3
+#      LUT6                        : 37
 #      MUXCY                       : 79
 #      MUXF7                       : 1
 #      VCC                         : 1
 #      XORCY                       : 65
-# FlipFlops/Latches                : 1
-#      LD                          : 1
 # IO Buffers                       : 101
 #      IBUF                        : 67
 #      OBUF                        : 34
@@ -244,16 +229,15 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:               1  out of  126800     0%  
- Number of Slice LUTs:                  274  out of  63400     0%  
-    Number used as Logic:               274  out of  63400     0%  
+ Number of Slice LUTs:                  168  out of  63400     0%  
+    Number used as Logic:               168  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    274
-   Number with an unused Flip Flop:     273  out of    274    99%  
-   Number with an unused LUT:             0  out of    274     0%  
-   Number of fully used LUT-FF pairs:     1  out of    274     0%  
-   Number of unique control sets:         1
+ Number of LUT Flip Flop pairs used:    168
+   Number with an unused Flip Flop:     168  out of    168   100%  
+   Number with an unused LUT:             0  out of    168     0%  
+   Number of fully used LUT-FF pairs:     0  out of    168     0%  
+   Number of unique control sets:         0
 
 IO Utilization: 
  Number of IOs:                         101
@@ -279,15 +263,7 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
----------------------------------------------------------+------------------------+-------+
-Clock Signal                                             | Clock buffer(FF name)  | Load  |
----------------------------------------------------------+------------------------+-------+
-ALU_OP[2]_GND_3_o_Mux_12_o(ALU_OP[2]_GND_3_o_Mux_12_o1:O)| NONE(*)(C32)           | 1     |
----------------------------------------------------------+------------------------+-------+
-(*) This 1 clock signal(s) are generated by combinatorial logic,
-and XST is not able to identify which are the primary clock signals.
-Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
-INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+No clock signals found in this design
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -298,114 +274,46 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: No path found
-   Minimum input arrival time before clock: 2.414ns
-   Maximum output required time after clock: 1.228ns
-   Maximum combinational path delay: 5.743ns
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 4.402ns
 
 Timing Details:
 ---------------
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'ALU_OP[2]_GND_3_o_Mux_12_o'
-  Total number of paths / destination ports: 193 / 1
--------------------------------------------------------------------------
-Offset:              2.414ns (Levels of Logic = 36)
-  Source:            A<1> (PAD)
-  Destination:       C32 (LATCH)
-  Destination Clock: ALU_OP[2]_GND_3_o_Mux_12_o falling
-
-  Data Path: A<1> to C32
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O            42   0.001   0.488  A_1_IBUF (A_1_IBUF)
-     LUT2:I0->O            1   0.097   0.000  Msub_GND_1_o_GND_1_o_sub_7_OUT_lut<0> (Msub_GND_1_o_GND_1_o_sub_7_OUT_lut<0>)
-     MUXCY:S->O            1   0.353   0.000  Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<0> (Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<0>)
-     MUXCY:CI->O           1   0.023   0.000  Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<1> (Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<1>)
-     MUXCY:CI->O           1   0.023   0.000  Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<2> (Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<2>)
-     MUXCY:CI->O           1   0.023   0.000  Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<3> (Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<3>)
-     MUXCY:CI->O           1   0.023   0.000  Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<4> (Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<4>)
-     MUXCY:CI->O           1   0.023   0.000  Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<5> (Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<5>)
-     MUXCY:CI->O           1   0.023   0.000  Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<6> (Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<6>)
-     MUXCY:CI->O           1   0.023   0.000  Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<7> (Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<7>)
-     MUXCY:CI->O           1   0.023   0.000  Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<8> (Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<8>)
-     MUXCY:CI->O           1   0.023   0.000  Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<9> (Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<9>)
-     MUXCY:CI->O           1   0.023   0.000  Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<10> (Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<10>)
-     MUXCY:CI->O           1   0.023   0.000  Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<11> (Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<11>)
-     MUXCY:CI->O           1   0.023   0.000  Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<12> (Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<12>)
-     MUXCY:CI->O           1   0.023   0.000  Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<13> (Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<13>)
-     MUXCY:CI->O           1   0.023   0.000  Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<14> (Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<14>)
-     MUXCY:CI->O           1   0.023   0.000  Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<15> (Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<15>)
-     MUXCY:CI->O           1   0.023   0.000  Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<16> (Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<16>)
-     MUXCY:CI->O           1   0.023   0.000  Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<17> (Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<17>)
-     MUXCY:CI->O           1   0.023   0.000  Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<18> (Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<18>)
-     MUXCY:CI->O           1   0.023   0.000  Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<19> (Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<19>)
-     MUXCY:CI->O           1   0.023   0.000  Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<20> (Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<20>)
-     MUXCY:CI->O           1   0.023   0.000  Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<21> (Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<21>)
-     MUXCY:CI->O           1   0.023   0.000  Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<22> (Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<22>)
-     MUXCY:CI->O           1   0.023   0.000  Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<23> (Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<23>)
-     MUXCY:CI->O           1   0.023   0.000  Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<24> (Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<24>)
-     MUXCY:CI->O           1   0.023   0.000  Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<25> (Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<25>)
-     MUXCY:CI->O           1   0.023   0.000  Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<26> (Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<26>)
-     MUXCY:CI->O           1   0.023   0.000  Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<27> (Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<27>)
-     MUXCY:CI->O           1   0.023   0.000  Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<28> (Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<28>)
-     MUXCY:CI->O           1   0.023   0.000  Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<29> (Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<29>)
-     MUXCY:CI->O           1   0.023   0.000  Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<30> (Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<30>)
-     MUXCY:CI->O           0   0.023   0.000  Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<31> (Msub_GND_1_o_GND_1_o_sub_7_OUT_cy<31>)
-     XORCY:CI->O           1   0.370   0.295  Msub_GND_1_o_GND_1_o_sub_7_OUT_xor<32> (GND_1_o_GND_1_o_sub_7_OUT<32>)
-     LUT3:I2->O            1   0.097   0.000  Mmux_ALU_OP[2]_C32_Mux_11_o11 (ALU_OP[2]_C32_Mux_11_o)
-     LD:D                     -0.028          C32
-    ----------------------------------------
-    Total                      2.414ns (1.631ns logic, 0.783ns route)
-                                       (67.6% logic, 32.4% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'ALU_OP[2]_GND_3_o_Mux_12_o'
-  Total number of paths / destination ports: 1 / 1
--------------------------------------------------------------------------
-Offset:              1.228ns (Levels of Logic = 2)
-  Source:            C32 (LATCH)
-  Destination:       OF (PAD)
-  Source Clock:      ALU_OP[2]_GND_3_o_Mux_12_o falling
-
-  Data Path: C32 to OF
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     LD:G->Q               1   0.472   0.379  C32 (C32)
-     LUT4:I2->O            1   0.097   0.279  Mxor_OF_xo<0>1 (OF_OBUF)
-     OBUF:I->O                 0.000          OF_OBUF (OF)
-    ----------------------------------------
-    Total                      1.228ns (0.569ns logic, 0.659ns route)
-                                       (46.4% logic, 53.6% route)
-
-=========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 11091 / 34
+  Total number of paths / destination ports: 7292 / 34
 -------------------------------------------------------------------------
-Delay:               5.743ns (Levels of Logic = 11)
-  Source:            A<17> (PAD)
+Delay:               4.402ns (Levels of Logic = 17)
+  Source:            A<0> (PAD)
   Destination:       ZF (PAD)
 
-  Data Path: A<17> to ZF
+  Data Path: A<0> to ZF
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             6   0.001   0.716  A_17_IBUF (A_17_IBUF)
-     LUT6:I0->O            1   0.097   0.511  out3 (out2)
-     LUT3:I0->O            1   0.097   0.295  out7_SW0 (N12)
-     LUT6:I5->O           11   0.097   0.425  out7 (_n0034)
-     LUT3:I1->O           15   0.097   0.576  Mmux_F272111 (Mmux_F27211)
-     LUT6:I3->O            1   0.097   0.295  Mmux_F311 (Mmux_F31)
-     LUT6:I5->O            2   0.097   0.697  Mmux_F312 (F_9_OBUF)
-     LUT6:I0->O            1   0.097   0.379  ZF<32>1 (ZF<32>)
-     LUT6:I4->O            1   0.097   0.693  ZF<32>2 (ZF<32>1)
-     LUT6:I0->O            1   0.097   0.279  ZF<32>8 (ZF_OBUF)
+     IBUF:I->O             5   0.001   0.398  A_0_IBUF (A_0_IBUF)
+     LUT2:I0->O            1   0.097   0.000  Madd_n0044_lut<0> (Madd_n0044_lut<0>)
+     MUXCY:S->O            1   0.353   0.000  Madd_n0044_cy<0> (Madd_n0044_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_n0044_cy<1> (Madd_n0044_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_n0044_cy<2> (Madd_n0044_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_n0044_cy<3> (Madd_n0044_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_n0044_cy<4> (Madd_n0044_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_n0044_cy<5> (Madd_n0044_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_n0044_cy<6> (Madd_n0044_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_n0044_cy<7> (Madd_n0044_cy<7>)
+     XORCY:CI->O           1   0.370   0.511  Madd_n0044_xor<8> (n0044<8>)
+     LUT6:I3->O            2   0.097   0.515  Mmux_F312 (F_8_OBUF)
+     LUT3:I0->O            1   0.097   0.379  ZF<31>1 (ZF<31>)
+     LUT6:I4->O            1   0.097   0.556  ZF<31>2 (ZF<31>1)
+     LUT6:I2->O            1   0.097   0.295  ZF<31>8_SW0 (N4)
+     LUT6:I5->O            1   0.097   0.279  ZF<31>8 (ZF_OBUF)
      OBUF:I->O                 0.000          ZF_OBUF (ZF)
     ----------------------------------------
-    Total                      5.743ns (0.874ns logic, 4.869ns route)
-                                       (15.2% logic, 84.8% route)
+    Total                      4.402ns (1.467ns logic, 2.935ns route)
+                                       (33.3% logic, 66.7% route)
 
 =========================================================================
 
@@ -415,14 +323,14 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 16.00 secs
-Total CPU time to Xst completion: 15.62 secs
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 8.49 secs
  
 --> 
 
-Total memory usage is 4641004 kilobytes
+Total memory usage is 4641048 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    1 (   0 filtered)
-Number of infos    :    1 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
 

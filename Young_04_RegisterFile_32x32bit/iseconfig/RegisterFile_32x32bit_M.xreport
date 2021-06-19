@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2021-05-26T21:35:38</DateModified>
+  <DateModified>2021-06-16T23:34:44</DateModified>
   <ModuleName>RegisterFile_32x32bit_M</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>Z:/WorkSpace/Verilog/Young_04_RegisterFile_32x32bit/iseconfig/RegisterFile_32x32bit_M.xreport</SavedFilePath>

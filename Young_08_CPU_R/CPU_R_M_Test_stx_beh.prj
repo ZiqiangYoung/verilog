@@ -1,0 +1,8 @@
+verilog isim_temp "Inst_ROM_64x32bit_M.v"
+verilog isim_temp "RegisterFile_32x32bit_M.v"
+verilog isim_temp "MultifunctionalALU_32bit_M.v"
+verilog isim_temp "Fetch_Inst_M.v"
+verilog isim_temp "DecodingController_M.v"
+verilog isim_temp "CPU_R_M.v"
+verilog isim_temp "CPU_R_M_Test.v"
+verilog isim_temp "D:/APP/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

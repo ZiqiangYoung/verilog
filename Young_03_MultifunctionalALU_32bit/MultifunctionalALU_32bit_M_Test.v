@@ -24,12 +24,12 @@
 
 module MultifunctionalALU_32bit_M_Test;
 
-	reg [32:1] A;
-	reg [32:1] B;
+	reg [31:0] A;
+	reg [31:0] B;
 	reg [2:0] ALU_OP;
 
 
-	wire [32:1] F;
+	wire [31:0] F;
 	wire ZF;
 	wire OF;
 
